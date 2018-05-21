@@ -38,7 +38,7 @@ namespace TestDeploy
                     string configvalue1 = ConfigurationManager.AppSettings["countoffiles"];
                     string configvalue2 = ConfigurationManager.AppSettings["logfilelocation"];
                     string configvalue3 = ConfigurationManager.AppSettings["connectionString"];
-                    Console.WriteLine($"{configvalue1} {configvalue2} {configvalue3}");
+                    Console.WriteLine($"{configvalue1} / {configvalue2} / {configvalue3}");
                 }
                 else if (args.Length==3)
                 {
