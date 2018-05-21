@@ -2,12 +2,16 @@
 <ConfigReplacement xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Replacements>
     <Replacement>
-      <Key>{{toto}}</Key>
-      <Value>titi</Value>
+      <Key>{{COUNTOFFILES}}</Key>
+      <Value>7</Value>
     </Replacement>
     <Replacement>
-      <Key>{{tutu}}</Key>
-      <Value>titi</Value>
+      <Key>{{ABC}}</Key>
+      <Value>abc2.txt</Value>
+    </Replacement>
+    <Replacement>
+      <Key>{{connectionString}}</Key>
+      <Value>bcd ; test=fggf ; dfgdfg</Value>
     </Replacement>
   </Replacements>
 </ConfigReplacement>

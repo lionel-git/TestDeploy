@@ -10,24 +10,12 @@ namespace TestDeploy
 {
     class Program
     {
-        static Dictionary<string, string> replacements = new Dictionary<string, string>();
-        static char[] separators = new char[] { ' ', '\t' };
         static void Replace(string sourceFile, string destFile, string dataFile)
         {
-            Console.WriteLine($"Copy {sourceFile} {destFile} {dataFile}");
-
-
-
             string content = File.ReadAllText(sourceFile);
-            foreach (string line0 in File.ReadLines(dataFile))
-            {
-                var line = line0.TrimStart(separators);
-                var index=line.IndexOfAny(separators);
-                var key = line.Substring(0, index);
-                var value = line.Substring(index+1);
-                Console.WriteLine($"key='{key}' '{value}'");
-                content = content.Replace(key, value);
-            }
+            var c = ConfigReplacement.LoadFromFile(dataFile);
+            foreach (var replacement in c.Replacements)
+                content = content.Replace(replacement.Key, replacement.Value);
             File.WriteAllText(destFile, content);
         }
 
@@ -44,9 +32,6 @@ namespace TestDeploy
         {
             try
             {
-                Test(); return;
-
-
                 if (args.Length == 0)
                 {
                     Console.WriteLine("Hello world");

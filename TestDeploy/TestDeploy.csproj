@@ -55,10 +55,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App.replacements.xml" />
-    <Content Include="TextFile1.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>D:\my_projects\TestDeploy\TestDeploy\bin\Debug\TestDeploy.exe $(ProjectDir)/App.Template.config $(TargetPath).config $(ProjectDir)/TextFile1.txt</PostBuildEvent>
+    <PostBuildEvent>D:\my_projects\TestDeploy\TestDeploy\bin\Debug\TestDeploy.exe $(ProjectDir)/App.Template.config $(TargetPath).config $(ProjectDir)/App.replacements.xml</PostBuildEvent>
   </PropertyGroup>
 </Project>
