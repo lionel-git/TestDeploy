@@ -1,0 +1,3 @@
+﻿{{COUNTOFFILES}} 7
+{{ABC}} abc.txt
+{{connectionString}} bcd ; test=fggf ; dfgdfg
