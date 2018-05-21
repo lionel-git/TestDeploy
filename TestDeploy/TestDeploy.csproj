@@ -43,8 +43,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ConfigReplacement.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Replacement.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.Template.config">
@@ -52,6 +54,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App.replacements.xml" />
     <Content Include="TextFile1.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -15,6 +15,9 @@ namespace TestDeploy
         static void Replace(string sourceFile, string destFile, string dataFile)
         {
             Console.WriteLine($"Copy {sourceFile} {destFile} {dataFile}");
+
+
+
             string content = File.ReadAllText(sourceFile);
             foreach (string line0 in File.ReadLines(dataFile))
             {
@@ -28,10 +31,22 @@ namespace TestDeploy
             File.WriteAllText(destFile, content);
         }
 
+        static void Test()
+        {
+         //   var c = new ConfigReplacement();
+         //   c.SaveToFile("data.xml");
+
+            var d = ConfigReplacement.LoadFromFile("data.xml");
+            Console.WriteLine(d);
+        }
+
         static void Main(string[] args)
         {
             try
             {
+                Test(); return;
+
+
                 if (args.Length == 0)
                 {
                     Console.WriteLine("Hello world");
